@@ -6,7 +6,7 @@ public class css {
        String[] farben = {"Blau", "Rot", "Gelb", "Grün", "Schwarz", "Weiss", "Lila", "Orange"};
        Random farbe = new Random();
        farbe = 1 + farben.nextString(7);
-// command k (nachricht nicht löschen)
+// command k (nachricht nicht löschen).
 
 
         
