@@ -47,7 +47,7 @@ public class css {
 
                 for (int index = 0; index <= 3; index++) {
                     generiertefarbe[index] = farben[random.nextInt(farben.length)];
-                    System.out.println(generiertefarbe[index]);
+                   // System.out.println(generiertefarbe[index]);
                     // um lösung z zeigen
                 }
                 for (x = 1; x <= 12; x++) {
