@@ -41,25 +41,27 @@ public class css {
             String[] benutzerEingaben = new String[4];
             String[] farben = {"blau", "rot", "gelb", "grün", "schwarz", "weiss", "lila", "orange"};
             Random random = new Random();
-            String[] generiertefarbe = {"blau", "blau", "blau", "rot"};//;new String[4];
+            String[] generiertefarbe = new String[4];
 
             for (int x = 1; x <= 12; x++) {
 
-              //  for (int index = 0; index <= 3; index++) {
-                  //  generiertefarbe[index] = farben[random.nextInt(farben.length)];
-                    // System.out.println(generiertefarbe[index]);
+              for (int index = 0; index <= 3; index++) {
+                    generiertefarbe[index] = farben[random.nextInt(farben.length)];
+                   //  System.out.println(generiertefarbe[index]);
                     // um lösung z zeigen
-               // }
+                }
 
                 for (x = 1; x <= 12; x++) {
+                    System.out.println("Farben zur Verfügung: Blau, Rot, Gelb, Grün, Schwarz, weiss, Lila, Orange.");
                     System.out.println("Versuch " + x);
                     System.out.println("");
                     for (int index = 0; index <= 3; index++) {
                         System.out.println("Farbe " + index);
                         benutzerEingaben[index] = sc.nextLine().toLowerCase();
                         boolean istEingabeKorrekt = true;
+
                 while (istEingabeKorrekt){
-                        switch (istEingabeKorrek) {
+                        switch (benutzerEingaben[index]) {
                             case "blau":
                                 istEingabeKorrekt = false;
                                 break;
@@ -145,12 +147,15 @@ public class css {
 
                     if (counterRot == 4) {
 
-                        System.out.println("Du hast Gewonnen.");
+                        System.out.println("Du hast Gewonnen!!! ");
                         System.out.println("willst du nochmal spielen? Ja oder Nein");
-                        String jaNein = sc.nextLine().toLowerCase();
-                        if (!jaNein.equals("ja")) {
-                            System.out.println("Danke fürs Spielen! Auf Wiedersehen :D");
-                            System.exit(0);
+                        String JaNein = sc.nextLine().toLowerCase();
+                        if (JaNein.equals("ja")) {
+                            keepPlaying = true;
+                        } else if (JaNein.equals("nein")) {
+                            System.out.println("Danke fürs Spielen! auf Wiedersehen");
+                            // System.exit(0);
+                            keepPlaying = false;
                         }
 
 
